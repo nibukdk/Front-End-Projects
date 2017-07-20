@@ -1,0 +1,16 @@
+.well{
+	border:solid red;
+	padding: auto;
+}
+.jumbotron{
+	margin: auto;
+	text-align: center;
+    text-transform: uppercase;
+}
+.well .div{
+	width: 30px;
+	height: 45px;
+}
+.clock{
+	display: none;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "pomodoro-clock",
+  "version": "1.0.0",
+  "description": "Its a pomodoro web app",
+  "main": "pomodoro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nibukdk/Front-End-Projects.git"
+  },
+  "author": "Nibesh Khadka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nibukdk/Front-End-Projects/issues"
+  },
+  "homepage": "https://github.com/nibukdk/Front-End-Projects#readme"
+}
