@@ -7,6 +7,8 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<link href="pomodoro.css" rel="stylesheet">
 	<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+	
 	<script  type="text/javascript" src="pomodoro.js"></script>
 
 </head>
@@ -15,13 +17,12 @@
 		<div class="row">
 			<div class="jumbotron col-lg-9 col-sm-6">
 				<h1>Pomodro Clock</h1>
-				<div class="well ">
+					<div class="well">
 					<div>
 						<button class="btn btn-primary btn-md plus">+</button>
 					</div>
 					
-					
-					<div>
+					<div class="">
 						<p class="timer-text">25</p>
 					</div>
 				
@@ -32,17 +33,13 @@
 						<button class="btn btn-primary btn-md reset">Reset</button>
 					</div>
 					<div >
-						<button class="btn btn-primary btn-md set">set</button>
+						<button class="btn btn-primary btn-md set">Start</button>
 					</div>
-				</div>
+					</div>
 
 				<div class="clock">
-					<div>
-						<button class="btn btn-primary btn-md minus">-</button>
-					</div>
-					<div >
-						<button class="btn btn-primary btn-md reset">Reset</button>
-					</div>
+					<p><span id="minutes"></span>:: <span id="seconds"></span></p>
+					<p> <button class="btn btn-danger stop">STOP</button> </p>
 				</div>
 			</div>
 		</div>
