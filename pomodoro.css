@@ -1,13 +1,69 @@
+body{
+	font-family: 'Indie Flower', cursive;
+	    text-transform: uppercase;
+		background: #070000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #070000, #4c0001, #070000); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #070000, #4c0001, #070000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background-size: cover;
+		color: #33691E;
+
+}
+h1{
+		font-family: 'Indie Flower', cursive;
+		font-size: 50px;
+	text-align: center;
+	color: #33691E;
+}
 .well{
 	border:solid red;
 	padding: auto;
 }
-.jumbotron{
-	margin: auto;
+
+
+
+.initTimers{
+	margin: 0 auto;
+	width: 100%;
 	text-align: center;
-    text-transform: uppercase;
+	font-size: 30px;
+	color: #33691E;
+
 }
-.well .div{
-	width: 30px;
-	height: 45px;
+
+.clock{
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 50px;
 }
+
+.btn:hover {
+cursor: pointer;
+background-color: green;
+}
+
+.btn{
+	border-radius: 16px;
+	font-size: 15px;
+	opacity: 1;
+	
+}
+.clock .btn:hover{
+	background-color: #E53935;
+	color: white;
+}
+.clock .btn{
+	background-color: #D32F2F;
+
+}
+.btn:focus {
+	outline:0 !important;
+}
+
+
+
+
+
+
+
+

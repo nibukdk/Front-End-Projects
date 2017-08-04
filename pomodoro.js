@@ -5,6 +5,10 @@ $(document).ready(function(){
 
 	var minutes;
 	
+	$(".btn").on('click', function(){
+            $(this).fadeOut(0.1);
+            $(this).fadeIn(0.1);
+        });
 	
 	$('.plus').on('click',function(){
 		defaultValue= defaultValue+1;

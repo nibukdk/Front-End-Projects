@@ -3,7 +3,7 @@
 
 <head>
 	<title>Js Calculator</title>
-	<link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:400,800" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<link href="pomodoro.css" rel="stylesheet">
 	<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,35 +15,29 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="jumbotron col-lg-9 col-sm-6">
+			
 				<h1>Pomodro Clock</h1>
-					<div class="well">
-					<div>
-						<button class="btn btn-primary btn-md plus">+</button>
-					</div>
-					
-					<div class="">
+				<div class="clock">
+					<p><span id="minutes">00</span>::<span id="seconds">00</span></p>
+					<p> <button class="btn btn-danger stop">STOP</button> </p>
+				</div>
+					<div class="initTimers col-lg-6 col-sm-9">
+						<button class="btn  btn-lg plus">+</button>
 						<p class="timer-text">25</p>
+						<button class="btn  btn-lg minus">-</button>
 					</div>
-				
-					<div>
-						<button class="btn btn-primary btn-md minus">-</button>
+					<div class="timer-setting">
+					<div >
+						<button class="btn btn btn-md reset">Reset</button>
 					</div>
 					<div >
-						<button class="btn btn-primary btn-md reset">Reset</button>
-					</div>
-					<div >
-						<button class="btn btn-primary btn-md set">Start</button>
+						<button class="btn btn btn-md set">Start</button>
 					</div>
 					</div>
 
-				<div class="clock">
-					<p><span id="minutes"></span>:: <span id="seconds"></span></p>
-					<p> <button class="btn btn-danger stop">STOP</button> </p>
 				</div>
-			</div>
+			
 		</div>
-	</div>
 
 </body>
 </html>
