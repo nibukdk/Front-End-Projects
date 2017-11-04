@@ -1,69 +1,28 @@
-body{
-	font-family: 'Indie Flower', cursive;
-	    text-transform: uppercase;
-		background: #070000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #070000, #4c0001, #070000); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #070000, #4c0001, #070000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		background-size: cover;
-		color: #33691E;
-
-}
-h1{
-		font-family: 'Indie Flower', cursive;
-		font-size: 50px;
-	text-align: center;
-	color: #33691E;
-}
-.well{
-	border:solid red;
-	padding: auto;
+body {
+  text-transform: uppercase;
+  color: #33691E;
 }
 
 
 
-.initTimers{
-	margin: 0 auto;
-	width: 100%;
-	text-align: center;
-	font-size: 30px;
-	color: #33691E;
+h1 {
+  color: #33691E;
+}
+.card{
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card .clock{
+  text-align: center;
+  padding:0.2rem;
 
 }
-
-.clock{
-	margin: 0 auto;
-	text-align: center;
-	font-weight: bolder;
-	font-size: 50px;
-}
-
-.btn:hover {
-cursor: pointer;
-background-color: green;
-}
-
 .btn{
-	border-radius: 16px;
-	font-size: 15px;
-	opacity: 1;
-	
+ transition: all ease-in-out  0.3s;
 }
-.clock .btn:hover{
-	background-color: #E53935;
-	color: white;
-}
-.clock .btn{
-	background-color: #D32F2F;
+.btn:focus{
+  outline: none;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 }
-.btn:focus {
-	outline:0 !important;
-}
-
-
-
-
-
-
-
-

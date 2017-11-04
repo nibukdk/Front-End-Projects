@@ -1,63 +1,74 @@
-$(document).ready(function(){
-	var seconds = 59;
-	
-	var defaultValue= 25;
+$(document).ready(function() {
+  var seconds = 59;
+  var defaultValue = 24;
+  var breakTime = 5;
+  var newDefaultTime = 0;
+  var newBreakTime = 0;
+  var minutes = 0;
+  var isPaused = false;
+  var counter = 1;
 
-	var minutes;
-	
-	$(".btn").on('click', function(){
-            $(this).fadeOut(0.1);
-            $(this).fadeIn(0.1);
-        });
-	
-	$('.plus').on('click',function(){
-		defaultValue= defaultValue+1;
-		$('.timer-text').html(defaultValue);
-		minutes= defaultValue-1 ;
+  //Value after submit button being clicked
+  /*$('.submit').on('click', function() {
+    newDefaultTime = $('#workTime').val();
+    newBreakTime = $('#breakTime').val();
+    breakTime = newBreakTime;
+    defaultValue = newDefaultTime;
+    });
+*/
+  //Function to creake clock
+  function workTimeCalculator() {
+    /*  this.defaultValue = defaultValue;
+      this.defaultValue = breakTime;*/
+    $('#seconds').html(seconds);
+    $('#minutes').html(defaultValue);
+    if (isPaused === false) {
+      seconds = seconds - 1;
+      if (seconds === 0) {
+        defaultValue = defaultValue - 1;
+        seconds = 59;
+      }
+    }
+    if (defaultValue < 0) {
+      breakTimeCalculator();
+      counter = counter + 1;
+    }
+  };
+  $('.pause').on('click', function(e) {
+    isPaused = !isPaused;
 
-	});
-	$('.minus').on('click',function(){
-		
-		if(defaultValue===0){
-			$('.timer-text').html(0);
-		}
-		else {
-			defaultValue= defaultValue-1;
-		$('.timer-text').html(defaultValue);
-		}
-		minutes= defaultValue-1 ;
+  });
+  $('.start').on('click', function(e) {
+    isPaused = false;
+    let timer = setInterval(workTimeCalculator, 1000);
+    if (seconds <= 0) {
+      clearInterval(timer);
+    }
 
-	});
-	$('.reset').on('click',function(){
-		defaultValue= 25;
-		$('.timer-text').html(defaultValue);
+  });
 
-		minutes= defaultValue-1 ;
-	});
-	
+  function breakTimeCalculator() {
+    /*  this.defaultValue = defaultValue;
+      this.defaultValue = breakTime;*/
+    $('#seconds').html(seconds);
+    $('#minutes').html(breakTime);
+    $('.pomodoro-time').html('BreakTime');
 
-	$('.set').on('click',function(){
-		minutes= defaultValue-1 ;
-		var timer =setInterval(timeCalculator,1000);	
-		$('.stop').on('click',function(){
-			 clearInterval(timer);
-		});	
-	});
+    if (isPaused === false) {
+      seconds = seconds - 1;
+      if (seconds === 0) {
+        breakTime = breakTime - 1;
+        seconds = 59;
+      }
+    }
+    if (breakTime < 0) {
+      if (counter === 3) {
+        return 0;
+      } else {
+        workTimeCalculator();
+      }
+    };
 
-	function timeCalculator(){	
-		
-		$('#seconds').html(seconds);
-		seconds= seconds-1;
-		if(seconds<0){
-			seconds=59;
-			minutes= minutes-1;
-			$('#minutes').html(minutes);
-		}
 
-		$('#minutes').html(minutes);
-	
-	}
-
-	
-
+  }
 });
